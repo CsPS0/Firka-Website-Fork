@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://docs.qwit.org/Firka/ipa_telepites.html -->
+<html lang="hu" class="js sidebar-visible navy" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Book generated using mdBook -->
+        
+        <title>Ipa Telepítés - QwIT Docs</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="rgb(22, 25, 35)">
+
+        <link rel="icon" href="https://docs.qwit.org/favicon.svg">
+        <link rel="shortcut icon" href="https://docs.qwit.org/favicon.png">
+        <link rel="stylesheet" href="./Ipa_files/variables.css">
+        <link rel="stylesheet" href="./Ipa_files/general.css">
+        <link rel="stylesheet" href="./Ipa_files/chrome.css">
+        <link rel="stylesheet" href="./Ipa_files/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./Ipa_files/font-awesome.css">
+        <link rel="stylesheet" href="./Ipa_files/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="./Ipa_files/highlight.css" disabled="">
+        <link rel="stylesheet" id="tomorrow-night-css" href="./Ipa_files/tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="./Ipa_files/ayu-highlight.css" disabled="">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="./Ipa_files/toc.js.download"></script>
+    <script src="./Ipa_files/searchindex.js.download" id="search-index"></script></head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents" aria-hidden="false">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"><ol class="chapter"><li class="chapter-item expanded affix "><a href="https://docs.qwit.org/index.html" tabindex="0">Home</a></li><li class="chapter-item expanded affix "></li><li class="part-title">Firka</li><li class="chapter-item expanded"><a href="https://docs.qwit.org/Firka/ipa_telepites.html" class="active" tabindex="0"><strong aria-hidden="true">1.</strong> Ipa Telepítés</a></li><li class="chapter-item expanded "><a href="https://docs.qwit.org/Firka/revoke_fix.html" tabindex="0"><strong aria-hidden="true">2.</strong> Revoke Fix</a></li></ol></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky" style="top: 299px;">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar" aria-expanded="true">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme theme-selected" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">QwIT Docs</h1>
+
+                    <div class="right-buttons">
+                        <a href="https://docs.qwit.org/print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="a-firka-ipa-fájlainak-telepítéséhez-kövesd-ezt-az-útmutatót"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#a-firka-ipa-f%C3%A1jlainak-telep%C3%ADt%C3%A9s%C3%A9hez-k%C3%B6vesd-ezt-az-%C3%BAtmutat%C3%B3t"><img src="./Ipa_files/dadb8ed3-7073-4591-a004-0d4c646fa963" alt="" width="24px"> A Firka IPA fájlainak telepítéséhez kövesd ezt az útmutatót.</a></h1>
+<p>Három lehetőséged van a Firka telepítésére:</p>
+<ul>
+<li><a href="https://docs.qwit.org/Firka/ipa_telepites.html#1-feather-met%C3%B3dus">Feather</a> - Fizetős, nem kell gép hozzá, 1 évre érvényes (ha lejár a certificate, újra meg kell vásárolni!)</li>
+<li><a href="https://docs.qwit.org/Firka/ipa_telepites.html#2-esign-met%C3%B3dus">ESign</a> - Ingyenes, nem kell gép hozzá, örökre van (ajánlott)</li>
+<li><a href="https://docs.qwit.org/Firka/ipa_telepites.html#3-sidestore-met%C3%B3dus-a-sidestore-az-altstore-nak-egy-jobb-verzi%C3%B3ja">SideStore</a> - Ingyenes, kell hozzá Mac, viszont Windowsal is működik, 7 naponta resign (telefonon megteheted lejárat előtt.)</li>
+</ul>
+<h2 id="1-feather-metódus"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#1-feather-met%C3%B3dus">1. Feather metódus</a></h2>
+<h3 id="1-a-p12-és-mobileprovision-beszerzése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#1-a-p12-%C3%A9s-mobileprovision-beszerz%C3%A9se">1. A .p12 és .mobileprovision beszerzése</a></h3>
+<ul>
+<li>Vegyél certet a <a href="https://kravasign.com/">kravasign.com</a> oldalon</li>
+<li>Várnod kell kis időt (általában 72 óra)</li>
+<li>Csatlakozz a <a href="https://discord.gg/kravasign">Discord szerverükhöz</a> és nyiss egy ticketet a rendelési számoddal</li>
+</ul>
+<h3 id="2-a-várakozás-után-kapsz-egy-letöltési-linket-egy-zip-fájlhoz-ami-három-dolgot-tartalmaz"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#2-a-v%C3%A1rakoz%C3%A1s-ut%C3%A1n-kapsz-egy-let%C3%B6lt%C3%A9si-linket-egy-zip-f%C3%A1jlhoz-ami-h%C3%A1rom-dolgot-tartalmaz">2. A várakozás után kapsz egy letöltési linket egy zip fájlhoz, ami három dolgot tartalmaz:</a></h3>
+<ul>
+<li>.p12</li>
+<li>.mobileprovision</li>
+<li>Egy mappa a tanúsítvány jelszavával</li>
+</ul>
+<h3 id="3-töltsd-le-a-legújabb-feather-ipa-t-innen-feather-github-releases"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#3-t%C3%B6ltsd-le-a-leg%C3%BAjabb-feather-ipa-t-innen-feather-github-releases">3. Töltsd le a legújabb Feather ipa-t innen: </a><a href="https://github.com/khcrysalis/Feather/releases">Feather GitHub Releases</a></h3>
+<h3 id="4-telepítés"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#4-telep%C3%ADt%C3%A9s">4. Telepítés:</a></h3>
+<ul>
+<li>Menj a sign.kravasign.com oldalra</li>
+<li>Töltsd fel a szükséges fájlokat:
+<ul>
+<li>.p12</li>
+<li>.mobileprovision</li>
+<li>feather.ipa</li>
+<li>Add meg a tanúsítvány jelszavát</li>
+</ul>
+</li>
+<li>Nyomd meg az <code class="hljs">Upload and Sign</code> gombot, és várj, ez egy kis ideig eltarthat</li>
+</ul>
+<h3 id="5-certificate-importálása"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#5-certificate-import%C3%A1l%C3%A1sa">5. Certificate importálása:</a></h3>
+<ul>
+<li>Menj a <code class="hljs">Settings</code> fülre és kattints a <code class="hljs">Add Certificate</code> gombra</li>
+<li>Kattints a <code class="hljs">+</code>-ra és importáld a .mobileprovision-t a .p12-t és írd be a .p12 jelszavát aztán kattints a <code class="hljs">Save</code> gombra</li>
+</ul>
+<h3 id="6-firka-telepítése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#6-firka-telep%C3%ADt%C3%A9se">6. Firka telepítése:</a></h3>
+<ul>
+<li>Amint telepített a Feather, nyisd meg és menj a <code class="hljs">Sources</code> fülre alul</li>
+<li>Kattints a <code class="hljs">Add Repo</code> gombra és másold be hogy <code class="hljs">https://raw.githubusercontent.com/spitkov/firkarepo/refs/heads/main/feather.json</code> és kattints az <code class="hljs">Add</code> gombra</li>
+<li>Menj a <code class="hljs">Firka Repository</code> menüpontra és kattints a letöltésre</li>
+<li>Ha letöltött menj a <code class="hljs">Library</code> fülre és kattints a Firka appra azután <code class="hljs">Sign Firka</code> aztán <code class="hljs">Start Signing</code></li>
+<li>A Signed Apps alatt látni fogod a firkát kattints rá és <code class="hljs">Install Firka</code></li>
+</ul>
+<h2 id="2-esign-metódus"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#2-esign-met%C3%B3dus">2. ESign metódus</a></h2>
+<h2 id="szükséged-van-ios-16-vagy-újabb-iosre"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#sz%C3%BCks%C3%A9ged-van-ios-16-vagy-%C3%BAjabb-iosre">Szükséged van iOS 16 vagy újabb iOSre.</a></h2>
+<h3 id="1-dns-profil-telepítése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#1-dns-profil-telep%C3%ADt%C3%A9se">1. DNS profil telepítése</a></h3>
+<ul>
+<li>Nyisd meg az <a href="https://whysoooofurious.netlify.app/">WSF Sideloading</a> weboldalt a Safariban</li>
+<li>Nyomj rá a <code class="hljs">Downloads</code> gombra, majd a <code class="hljs">Config Profiles</code> gombra</li>
+<li>Válaszd a <code class="hljs">madNS</code> profilt</li>
+<li>A profil letöltése után nyisd meg a <strong>Beállításokat</strong></li>
+<li>A neved alatt megjelenik a <strong>Profil Letöltve</strong> (vagy angolul: <strong>Profile Downloaded</strong>)</li>
+<li>Nyomj rá, majd nyomd meg a <strong>Telepítés/Install</strong> gombot</li>
+<li>Kövesd az utasításokat (a felugró ablakokon nyomd a <strong>Következő/Next</strong> gombot)</li>
+<li>A telepítés után görgess le az <strong>Általános/General</strong> menüpontra</li>
+<li>Nyomj a <strong>VPN, DNS, és eszközfelügyelet</strong> (vagy iOS 18-ban: <strong>VPN és eszközfelügyelet</strong>) opcióra</li>
+<li>Válaszd a <strong>DNS</strong> opciót és válassz egyet a lehetőségek közül:
+<ul>
+<li><strong>Sima</strong>: Ajánlott, alap funkcionalitás</li>
+<li><strong>AdBlock</strong>: Letiltja a reklámokat (néhány script is letiltásra kerülhet, ami problémákat okozhat)</li>
+<li><strong>OTA blocker</strong>: Letiltja az Over-The-Air (Apple szerverekről küldött) frissítéseket</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-tanúsítványok-letöltése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#2-tan%C3%BAs%C3%ADtv%C3%A1nyok-let%C3%B6lt%C3%A9se">2. Tanúsítványok letöltése</a></h3>
+<ul>
+<li>Menj vissza a korábban megnyitott weboldalra</li>
+<li>Nyomj a <code class="hljs">Certificates</code> gombra, majd újra a <code class="hljs">Certificates</code> opcióra</li>
+<li>Engedélyezd a fájl letöltését és töltsd le.</li>
+</ul>
+<h3 id="3-portal-telepítése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#3-portal-telep%C3%ADt%C3%A9se">3. Portal telepítése</a></h3>
+<ul>
+<li>Menj vissza a letöltési oldalra</li>
+<li>Nyomj a <code class="hljs">Portal</code> gombra</li>
+<li>Próbáld meg az egyik <code class="hljs">Portal - XXXXX</code> opciót</li>
+<li>Ha "<em>Integritás nem ellenőrizhető</em>" hibát kapsz, próbáld a többi lehetőséget</li>
+<li>Vannak ESign only certificatek, de ez minket nem zavar mivel ESign-t akarunk telepíteni, csak késöbb lesz másab</li>
+<li>Ha egyik sem működik, feketelistán lehetsz - írj a Firka Discord szerverbe segítségért, vagy olvasd el a "<a href="https://docs.qwit.org/Firka/revoke_fix.html">Revoke Fix Guide</a>"-ot.</li>
+<li>Menj a beállitásokba utána Általános az alatt VPN és eszközfelügyelet ott keresd meg a Profilt amit letöltöttél menjn rá és azon belül kattints a megbizásra utána megbizás (vagy megbizás és újraindítás)</li>
+</ul>
+<h3 id="4-esign-telepítése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#4-esign-telep%C3%ADt%C3%A9se">4. ESign telepítése</a></h3>
+<ul>
+<li>Nyisd meg a <strong>Portal</strong>t</li>
+<li>Menj végig a beállítási folyamaton</li>
+<li>Navigálj a <code class="hljs">Downloads</code> fülre</li>
+<li>Nyomd meg az <strong>ESign</strong> opciót, és válasszd ki ugyanazt amilyen nevű Portal-t tölöttél le, majd telepítsd ugyanúgy, mint a <strong>Portal</strong>-t</li>
+<li>Nyisd meg az <strong>ESignt</strong> és fogadd el a licencszerződést</li>
+</ul>
+<h3 id="5-tanúsítványok-telepítése"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#5-tan%C3%BAs%C3%ADtv%C3%A1nyok-telep%C3%ADt%C3%A9se">5. Tanúsítványok telepítése</a></h3>
+<ul>
+<li>Kattints alul a <code class="hljs">File</code> gombra</li>
+<li>Aztán a 3 pöttyre jobb felül</li>
+<li>Keresd meg a letöltött <code class="hljs">certificates.zip</code> file-t és importáld</li>
+<li>Kattints a zip-re és utána Unzip</li>
+<li>Keresd meg amilyen portál-t telepítettél</li>
+<li>Ha ESign only-s certificates Portált töltöttél le akkor a <code class="hljs"># ESign Only Certs</code> mappába találod</li>
+<li>Az ilyeneket úgy telepíted, hogy rányomsz a <code class="hljs">certificatname.esigncert</code> fájlra utána <code class="hljs">Import Certificate Managment</code></li>
+<li>Ha nem ESign only portált telepítettél akkor a mappába egy .p12 és .mobileprovision fájlt fogsz látni</li>
+<li>Előszőr kattints a .mobileprovision fájlra és Import (Itt egy kínai szöveg fog megjelenni xd)</li>
+<li>Azután kattints a .p12 fájlra és ha kér jelszót írd be, hogy <code class="hljs">WSF</code></li>
+</ul>
+<h3 id="6-firka-telepítése-1"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#6-firka-telep%C3%ADt%C3%A9se-1">6. Firka telepítése</a></h3>
+<ul>
+<li>Menj az <code class="hljs">AppStore</code> fülre alul aztán bal felül kattints az <code class="hljs">App Source</code> gombra azután jobb felül kattints az +-ra és másold be hogy <code class="hljs">https://raw.githubusercontent.com/spitkov/firkarepo/refs/heads/main/esign.json</code></li>
+<li>Menj vissza és az AppStore fülben látni fogod a Firká-t</li>
+<li>Kattints hogy <code class="hljs">Download</code></li>
+<li>A <code class="hljs">Download</code> fülben láthatod a letöltést, ha letöltött kattints rá és nyomd meg a <code class="hljs">Import App Library</code> gombot</li>
+<li>Azután menj a <code class="hljs">Apps</code> fülre és válaszd ki a Firkát kattints a <code class="hljs">Signature</code>-re aztán megint <code class="hljs">Signature</code> (fontos ne lépj ki az esign-bol amíg nem jelentek meg az <code class="hljs">Install</code> és az <code class="hljs">Exit</code> gombok)</li>
+<li>Ha végzett kattints az <code class="hljs">Install</code> gombra és fel fog jönni egy kis menü hogy esign.yyyue.xyz telepíteni akarja a Firkát akkor kattints arra hogy Telepítés</li>
+<li>És kész is 🎉</li>
+</ul>
+<h3 id="esign-faq"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#esign-faq">ESign FAQ:</a></h3>
+<ul>
+<li>Q1: Törölhetem az ESignt meg a profilt amiután meg lett a Firka?</li>
+<li>A1: Igen, ha elakarod b*szni az egészet. Nem, ha meg szeretnéd tartani.</li>
+<li>Több kérdés? Írj a Firka Discord szerverébe.</li>
+</ul>
+<h2 id="3-sidestore-metódus-a-sidestore-az-altstore-nak-egy-jobb-verziója"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#3-sidestore-met%C3%B3dus-a-sidestore-az-altstore-nak-egy-jobb-verzi%C3%B3ja">3. SideStore metódus (A SideStore az AltStore-nak egy jobb verziója)</a></h2>
+<h3 id="1-előfeltételek"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#1-el%C5%91felt%C3%A9telek">1. Előfeltételek</a></h3>
+<ul>
+<li>Mac számítógép macOS 10.15 vagy újabb verzióval</li>
+<li>Apple fiók</li>
+<li>Internet kapcsolat</li>
+<li>iPhone iOS 14 vagy újabb verzióval</li>
+</ul>
+<h3 id="2-szükséges-fájlok-letöltése-maceden"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#2-sz%C3%BCks%C3%A9ges-f%C3%A1jlok-let%C3%B6lt%C3%A9se-maceden">2. Szükséges fájlok letöltése (Maceden)</a></h3>
+<ul>
+<li>AltServer: https://cdn.altstore.io/file/altstore/altserver.zip</li>
+<li>SideStore IPA: https://github.com/sidestore/sidestore/releases/latest/download/sidestore.ipa</li>
+<li>JitterBugPair: https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-macos.zip</li>
+</ul>
+<h3 id="3-altserver-telepítése-és-beállítása-maceden"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#3-altserver-telep%C3%ADt%C3%A9se-%C3%A9s-be%C3%A1ll%C3%ADt%C3%A1sa-maceden">3. AltServer telepítése és beállítása (Maceden)</a></h3>
+<ul>
+<li>Csomagold ki az AltServer-t a ZIP fájlból</li>
+<li>Helyezd át az Alkalmazások mappába</li>
+<li>Indítsd el az AltServer-t</li>
+</ul>
+<h3 id="4-sidestore-telepítése-maceden-és-az-iphoneodon"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#4-sidestore-telep%C3%ADt%C3%A9se-maceden-%C3%A9s-az-iphoneodon">4. SideStore telepítése (Maceden és az iPhoneodon)</a></h3>
+<ul>
+<li>Csatlakoztasd az iPhone-od a Mac-hez</li>
+<li>Engedélyezd a "Megbízható számítógép" opciót az iPhone-on (ha kéri)</li>
+<li>A Mac menüsorában tartsd nyomva az Option⌥/Alt⌥ gombot</li>
+<li>Kattints az AltStore ikonra (rombusz alakú)</li>
+<li>Válaszd a "Sideload .ipa" opciót</li>
+<li>Válaszd ki az eszközöd nevét</li>
+<li>Válaszd ki a letöltött SideStore IPA fájlt</li>
+<li>Add meg az Apple fiókod adatait</li>
+<li>Várd meg a telepítést</li>
+<li>Az iPhone-on menj a Beállítások &gt; Általános &gt; VPN &amp; Eszközfelügyelet menübe</li>
+<li>Keresd meg az Apple email címed és nyomd meg a "Megbízható" gombot</li>
+</ul>
+<h3 id="5-fejlesztői-mód-engedélyezése-ios-16-vagy-újabb-esetén-iphoneodon"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#5-fejleszt%C5%91i-m%C3%B3d-enged%C3%A9lyez%C3%A9se-ios-16-vagy-%C3%BAjabb-eset%C3%A9n-iphoneodon">5. Fejlesztői mód engedélyezése (iOS 16 vagy újabb esetén) (iPhoneodon)</a></h3>
+<ul>
+<li>Menj a Beállítások &gt; Adatvédelem és Biztonság menübe</li>
+<li>Görgess az aljára</li>
+<li>Kapcsold be a Fejlesztői módot</li>
+<li>Várd meg az iPhone újraindulását</li>
+<li>Húzd fel a képernyőt az indítás közben amikor kéri</li>
+</ul>
+<h3 id="6-párosítás-beállítása-maceden"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#6-p%C3%A1ros%C3%ADt%C3%A1s-be%C3%A1ll%C3%ADt%C3%A1sa-maceden">6. Párosítás beállítása (Maceden)</a></h3>
+<ul>
+<li>Csomagold ki a JitterBugPair ZIP fájlt</li>
+<li>Állíts be jelkódot az iPhone-on (ha még nincs)</li>
+<li>Csatlakoztasd az iPhone-od</li>
+<li>Oldd fel az eszközt és hagyd a kezdőképernyőn</li>
+<li>Futtasd a JitterBugPair parancs fájlt</li>
+<li>A generált párosító fájl neve: "(UDID).mobiledevicepairing"</li>
+<li>Tömörítsd be a párosító fájlt</li>
+<li>Küldd át az iPhone-ra (AirDrop vagy email)</li>
+<li>Az iPhone-on nyisd meg a Fájlok alkalmazást</li>
+<li>Csomagold ki a ZIP fájlt.</li>
+</ul>
+<h3 id="7-wireguard-vpn-beállítása-iphoneodon"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#7-wireguard-vpn-be%C3%A1ll%C3%ADt%C3%A1sa-iphoneodon">7. WireGuard VPN beállítása (iPhoneodon)</a></h3>
+<ul>
+<li>Töltsd le a WireGuard VPN alkalmazást az App Store-ból: https://apps.apple.com/us/app/wireguard/id1441195209 <a href="https://apps.apple.com/us/app/wireguard/id1441195209">WireGuard App Store link</a></li>
+<li>Telepítsd az alábbi Configuration Fájlt: https://github.com/sidestore/sidestore/releases/download/0.1.1/sidestore.conf Amint ez megvan, nyisd meg a Fájlok alkalmazást, és keresd meg hogy "SideStore.conf". Nyomj rá hosszan és "oszd meg". A Megosztó ablakba ha kell, görgess a "Több/More" gombra, és nyisd meg a WireGuard-al.</li>
+<li>Nyomj az Engedélyezésre mikor azt mondja hogy: "A "WireGuard" VPN konfigurációt szeretne hozzáadni". Megynyitja a Beállításokat. Mikor kéri, írd be a jelkódodat. Ez vissza fog dobni a WireGuardba. Kapcsold be a SideStore-t. (Ez a "VPN" quote-unquote nem egy VPN, csak letiltja az Applenek az oscp-jét. Az OSCP az ami ellenőrzi hogy mit sideloadingolsz. Magyarúl, ez bisztonságos)</li>
+</ul>
+<h3 id="8-sidestore-app-beállítása-iphoneodon"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#8-sidestore-app-be%C3%A1ll%C3%ADt%C3%A1sa-iphoneodon">8. SideStore app beállítása (iPhoneodon)</a></h3>
+<ul>
+<li>Indítsd el a SideStore alkalmazást</li>
+<li>Nyomj az OK gombra</li>
+<li>Válaszd ki a párosító fájlt</li>
+<li>Jelentkezz be az Apple Fiókoddal</li>
+</ul>
+<h3 id="megjegyzések"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#megjegyz%C3%A9sek">Megjegyzések:</a></h3>
+<ul>
+<li>Ha frissíted az eszközöd, újra kell csinálnod a párosítást</li>
+<li>Új párosító fájl hozzáadásához:
+<ul>
+<li>Menj a SideStore beállításaiba</li>
+<li>Nyomd meg a "Reset Pairing File" gombot</li>
+<li>Add hozzá az új verziót</li>
+<li>Sajnáljuk a komplikált fojamatot. Sajnálatos módon a Testflight vagy az App Storera való kitétel jelenleg nem nagyon egy opció, mivel az Applenek 100 eurós fejelsztői membership vásárlása kötelező.</li>
+</ul>
+</li>
+</ul>
+<h2 id="kreditek"><a class="header" href="https://docs.qwit.org/Firka/ipa_telepites.html#kreditek">Kreditek</a></h2>
+<ul>
+<li><strong>A Firka csapat</strong>: Az app zöld verziójának fejlesztői
+<ul>
+<li>Discord: <a href="https://discord.gg/6awUPSMFKe">https://discord.gg/6awUPSMFKe</a></li>
+<li>GitHub: <a href="https://github.com/QwIT-Development/app-legacy">https://github.com/QwIT-Development/app-legacy</a></li>
+</ul>
+</li>
+<li><strong>WSF</strong>: A Permanent Signing lehetővé tétele
+<ul>
+<li>X (korábban Twitter): <a href="https://x.com/wsf_team">https://x.com/wsf_team</a></li>
+</ul>
+</li>
+<li><strong>Spitkov</strong>: A Feather útmutató írója, és a repok készítője/maintainelője.
+<ul>
+<li>Weboldal: <a href="https://spitkov.hu/">https://spitkov.hu</a></li>
+</ul>
+</li>
+<li><strong>TheAppleUser</strong>: Az Esign és SideStore útmutató írója.
+<ul>
+<li>X (korábban Twitter): <a href="https://x.com/TheAppleUser11">https://x.com/TheAppleUser11</a></li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="https://docs.qwit.org/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="https://docs.qwit.org/Firka/revoke_fix.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="https://docs.qwit.org/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="https://docs.qwit.org/Firka/revoke_fix.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="./Ipa_files/elasticlunr.min.js.download"></script>
+        <script src="./Ipa_files/mark.min.js.download"></script>
+        <script src="./Ipa_files/searcher.js.download"></script>
+
+        <script src="./Ipa_files/clipboard.min.js.download"></script>
+        <script src="./Ipa_files/highlight.js.download"></script>
+        <script src="./Ipa_files/book.js.download"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    
+
+</body></html>
