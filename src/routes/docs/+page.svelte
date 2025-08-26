@@ -413,6 +413,7 @@
     .docs-content {
         flex-grow: 1;
         padding-left: 20px;
+        overflow-x: auto;
     }
 
     /* Basic styling for content to match main site's fonts */
@@ -471,5 +472,34 @@
     :global(.docs-content strong) {
         font-weight: 700;
         color: var(--text_primary);
+    }
+
+    :global(.docs-content pre),
+    :global(.docs-content code) {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+    :global(.docs-content a) {
+        word-break: break-all;
+    }
+
+    @media (max-width: 768px) {
+        .docs-container {
+            flex-direction: column;
+        }
+
+        .docs-sidebar {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid var(--text_teritary);
+            padding-right: 0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .docs-content {
+            padding-left: 0;
+        }
     }
 </style>

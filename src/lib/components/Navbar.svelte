@@ -40,7 +40,7 @@
 		z-index: 1000;
 		position: fixed;
 		height: 40px;
-        max-width: 278px;
+        width: var(--branding-width);
         display: flex;
         flex-direction: row;
         gap: 12px;
@@ -69,6 +69,15 @@
 	div.branding a img {
 		width: 40px;
 		height: 40px;
+	}
+
+	@media (max-width: 1024px) {
+		div.branding {
+			left: 24px;
+		}
+		div.links {
+			right: 24px;
+		}
 	}
 
 	@media (max-width: 768px) {

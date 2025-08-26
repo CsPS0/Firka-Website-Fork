@@ -32,7 +32,13 @@
 		align-items: center;
 		justify-content: center;
 		min-height: 100vh;
-		padding: 176px 20px 176px 20px;
+		padding: 176px var(--side-padding) 176px var(--side-padding);
+	}
+
+	@media (max-width: 1024px) {
+		main {
+			padding: 176px 48px 176px 48px;
+		}
 	}
 
 	@media (max-width: 768px) {

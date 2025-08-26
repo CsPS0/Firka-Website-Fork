@@ -228,6 +228,17 @@
 		opacity: 0.5;
 	}
 
+	@media (max-width: 1024px) {
+		.content {
+			flex-direction: column;
+			align-items: center;
+		}
+		div.card {
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+
 	@media (max-width: 1440px) {
 		main {
 			display: flex;

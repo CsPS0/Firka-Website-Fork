@@ -169,6 +169,20 @@
 		flex-wrap: wrap;
 	}
 
+	@media (max-width: 1024px) {
+		div.main {
+			width: 100%;
+		}
+		div.cards {
+			flex-direction: column;
+			align-items: center;
+		}
+		div.card {
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+
 	/* it is 1440, bc it looks bad with the big ass text, so i did this */
 	@media (max-width: 1440px) {
 		div.main {

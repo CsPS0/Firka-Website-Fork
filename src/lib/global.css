@@ -3,6 +3,11 @@
 @import 'remixicon/fonts/remixicon.css';
 
 :root {
+    /* Layout */
+    --branding-width: 278px;
+    --footer-width: 200px;
+    --side-padding: calc(var(--branding-width) + 48px);
+
     /* Colors */
     --background: #FAFFF0;
     --background-0: #fafff000;
@@ -191,4 +196,19 @@ h2 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --branding-width: 200px;
+        --footer-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --branding-width: auto;
+        --footer-width: auto;
+        --side-padding: 20px;
+    }
 }

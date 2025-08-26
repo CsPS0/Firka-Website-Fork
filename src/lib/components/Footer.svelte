@@ -169,6 +169,7 @@
 		position: fixed;
 		bottom: 48px;
 		left: 48px;
+		width: var(--footer-width);
 	}
 
 	footer * a {
@@ -212,6 +213,17 @@
 		mask-repeat: no-repeat;
 		-webkit-mask-position: center;
 		mask-position: center;
+	}
+
+	@media (max-width: 1024px) {
+		footer {
+			left: 24px;
+			bottom: 24px;
+		}
+		.style-switch {
+			right: 24px;
+			bottom: 24px;
+		}
 	}
 
 	@media (max-width: 768px) {
